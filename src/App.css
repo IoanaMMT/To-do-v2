@@ -1,3 +1,12 @@
 .itemLists {
     display: flex;
 }
+
+/* .NewItemList {
+    display: flex;
+    direction: inline;
+} */
+
+.ulCompletedItemList {
+    text-decoration:  line-through;
+}

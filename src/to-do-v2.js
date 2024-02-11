@@ -61,28 +61,30 @@ const handleClick = (index) => {
                             {/* this is to capture the entered new item */}
             </Box>
             <div className="itemLists">
-                <div>
-                    <h2>New Items</h2>
-                    <FormGroup>
-                        {newItem.map((item, index) => (
-                            <FormControlLabel 
-                            key = {index}
-                            control={<Checkbox onClick= {() => handleClick(index)} checked={item.completed}/>} 
-                            label= {item.text}
-                            />
-                            ))}
-                    </FormGroup>
-                </div>
+                <div className="newItemList">
                     <div>
-                        <h2>Completed Items</h2>
-                        <ul>
-                            {completedItem.map((item,index) => (
-                                <li key={index}>{item.text}</li>
-                            ))}
-                        </ul>
+                        <h2>New Items</h2>
+                        <FormGroup>
+                            {newItem.map((item, index) => (
+                                <FormControlLabel 
+                                key = {index}
+                                control={<Checkbox onClick= {() => handleClick(index)} checked={item.completed}/>} 
+                                label= {item.text}
+                                />
+                                ))}
+                        </FormGroup>
                     </div>
-                <div>
-                    {/* filter new items and if completed, move it to a new list of completed items */}
+                        <div className="completedItemList">
+                            <h2>Completed Items</h2>
+                            <ul className="ulCompletedItemList">
+                                {completedItem.map((item,index) => (
+                                    <li key={index}>{item.text}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    <div>
+                        {/* filter new items and if completed, move it to a new list of completed items */}
+                    </div>
                 </div>
             </div>
         </>
