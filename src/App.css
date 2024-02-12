@@ -1,5 +1,6 @@
 .itemLists {
     display: flex;
+<<<<<<< HEAD
 }
 
 /* .NewItemList {
@@ -9,4 +10,6 @@
 
 .ulCompletedItemList {
     text-decoration:  line-through;
+=======
+>>>>>>> a41ca1a2a3c02c4853d7615fca8ee3dcd0d07908
 }
