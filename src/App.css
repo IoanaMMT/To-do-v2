@@ -1,15 +1,68 @@
-.itemLists {
+.hero {
     display: flex;
-<<<<<<< HEAD
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(248, 245, 241);
+    max-height: 100%;
 }
 
-/* .NewItemList {
+.container {
     display: flex;
-    direction: inline;
-} */
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    max-width:max-content;
+    background-color: rgb(248, 245, 241);
+}
 
+.title {
+    padding-left: 20px;
+}
+
+.itemLists {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    max-width: 100%;
+}
+
+.ulNewItemList{
+    padding-left: 10px;
+    border: solid 2px black;
+
+}
 .ulCompletedItemList {
     text-decoration:  line-through;
-=======
->>>>>>> a41ca1a2a3c02c4853d7615fca8ee3dcd0d07908
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+}
+
+.ulNewItemList {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.textField {
+    align-items: left;
+    text-align: left;
+}
+
+
+.doneList {
+    padding-left: 20px;
+
+}
+
+.ulNewItemList,
+.ulCompletedItemList {
+    background-color: azure;
+    transform-style: preserve-3d;
+    border: 1px solid rgb(149, 125, 243);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    max-height: 200px;
+    min-height: 10px;
+    overflow:auto; 
+    
 }
