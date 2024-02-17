@@ -5,6 +5,7 @@ import Checkbox from '@mui/material/Checkbox';
 import { useState, useEffect } from "react";
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
 
 export default function MyList(){
     const[newItem, setNewItem] = useState([]);
@@ -29,7 +30,10 @@ const handleClick = (index) => {
            const filteredItems =  updatedItems.filter(item => !item.completed);
            setNewItem(filteredItems)
         }
+}
 
+const clearList = () => {
+    setCompletedItem([]);
 }
 
     return(
@@ -70,9 +74,10 @@ const handleClick = (index) => {
                                             key = {index}
                                             control={<Checkbox onClick= {() => handleClick(index)} checked={item.completed}/>} 
                                             label= {item.text}
-                                        />
+                                        />                                  
                                         ))}
                                     </FormGroup>
+
                         {/* filter new items and if completed, move it to a new list of completed items */}
                 </div>
                     <div className="completedItemList">
@@ -82,6 +87,7 @@ const handleClick = (index) => {
                                         <li key={index}>{item.text}</li>
                                     ))}
                                 </ul>
+                                <Button variant="outlined" className="clear-button"style={{ borderRadius: '10px' }} onClick = {clearList}>Clear</Button>
                     </div>
                 </div>
 

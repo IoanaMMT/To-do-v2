@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(248, 245, 241);
+    background-color: #f1f8f8;
     max-height: 100%;
 }
 
@@ -12,8 +12,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: left;
-    max-width:max-content;
-    background-color: rgb(248, 245, 241);
+    max-width: max-content;
 }
 
 .title {
@@ -27,21 +26,29 @@
     max-width: 100%;
 }
 
-.ulNewItemList{
+.ulNewItemList {
     padding-left: 10px;
     border: solid 2px black;
-
+    padding-top: 5px; /* Adjust padding as needed */
+    padding-bottom: 5px; /* Adjust padding as needed */
+    background-color: azure;
+    transform-style: preserve-3d;
+    border: 1px solid rgb(149, 125, 243);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    max-height: 200px; /* Adjust max-height as needed */
+    overflow: auto; 
 }
+
 .ulCompletedItemList {
-    text-decoration:  line-through;
+    text-decoration: line-through;
     padding-top: 15px;
     padding-bottom: 15px;
-
-}
-
-.ulNewItemList {
-    padding-top: 5px;
-    padding-bottom: 5px;
+    background-color: azure;
+    transform-style: preserve-3d;
+    border: 1px solid rgb(149, 125, 243);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    max-height: 200px; /* Adjust max-height as needed */
+    overflow: auto; 
 }
 
 .textField {
@@ -49,20 +56,10 @@
     text-align: left;
 }
 
-
 .doneList {
     padding-left: 20px;
-
 }
 
-.ulNewItemList,
-.ulCompletedItemList {
-    background-color: azure;
-    transform-style: preserve-3d;
-    border: 1px solid rgb(149, 125, 243);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    max-height: 200px;
-    min-height: 10px;
-    overflow:auto; 
-    
+.clear-button {
+    width: 100%;
 }
